@@ -6,7 +6,11 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 
 현재 버전은 `0.2.0`입니다.
 
+[Windows x64 무설치 ZIP 다운로드 (권장)](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-portable.zip)
+
 [Windows x64 설치 파일 다운로드](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-setup.exe)
+
+> **Defender 오탐 안내:** 현재 설치 파일이 일부 PC에서 `Trojan:Win32/Wacatac.C!ml`로 탐지되는 사례가 있어 Microsoft에 오탐 분석을 요청했습니다. 분석이 완료될 때까지는 위의 무설치 ZIP 사용을 권장합니다. Windows 보안 기능을 끄거나 백신 예외를 추가하지 마세요. ZIP 내부 파일도 탐지될 경우 설치를 중단하고 [Issues](https://github.com/TereBin/obs-live-editor/issues)에 알려주세요.
 
 요구 사항:
 
@@ -14,18 +18,28 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 - OBS Studio 64비트
 - 치지직 스트리머 계정
 
-## 설치
+## 무설치 ZIP 설치 (권장)
 
 1. OBS Studio를 종료합니다.
-2. 위의 설치 파일을 내려받아 실행합니다.
+2. 무설치 ZIP을 내려받아 압축을 풉니다.
+3. 압축 안의 `bin`, `data`, `obs-plugins` 폴더를 OBS 설치 폴더(기본값: `C:\Program Files\obs-studio`)에 복사합니다.
+4. 파일 복사 중 관리자 권한 요청이 나타나면 승인합니다.
+5. OBS Studio를 다시 실행하고 `도크` 메뉴에서 `라이브 정보 편집`을 엽니다.
+
+## EXE 설치
+
+Microsoft의 오탐 분석이 끝난 뒤에는 설치 파일을 이용할 수 있습니다.
+
+1. OBS Studio를 종료합니다.
+2. 설치 파일을 내려받아 실행합니다.
 3. 관리자 권한 요청을 승인하고 설치를 완료합니다.
 4. OBS Studio를 다시 실행합니다.
 5. OBS의 `도크` 메뉴에서 `라이브 정보 편집`을 엽니다.
 
-현재 설치 파일은 코드 서명이 되어 있지 않아 Windows SmartScreen 경고가 나타날 수 있습니다. `추가 정보`를 선택한 뒤 게시자와 파일을 확인하고 실행하세요. 무결성을 확인하려면 아래 명령의 결과를 [SHA256SUMS.txt](./SHA256SUMS.txt)와 비교합니다.
+현재 배포 파일은 코드 서명이 되어 있지 않습니다. 무결성을 확인하려면 아래 명령의 결과를 [SHA256SUMS.txt](./SHA256SUMS.txt)와 비교합니다.
 
 ```powershell
-Get-FileHash .\obs-live-editor-0.2.0-windows-x64-setup.exe -Algorithm SHA256
+Get-FileHash .\obs-live-editor-0.2.0-windows-x64-portable.zip -Algorithm SHA256
 ```
 
 ## 사용
@@ -42,7 +56,15 @@ Get-FileHash .\obs-live-editor-0.2.0-windows-x64-setup.exe -Algorithm SHA256
 
 ## 삭제
 
-Windows의 `설정 > 앱 > 설치된 앱`에서 `Live Editor for OBS`를 제거합니다.
+EXE로 설치했다면 Windows의 `설정 > 앱 > 설치된 앱`에서 `Live Editor for OBS`를 제거합니다.
+
+무설치 ZIP으로 설치했다면 OBS를 종료한 뒤 다음 파일을 직접 삭제합니다.
+
+```text
+C:\Program Files\obs-studio\obs-plugins\64bit\obs-live-editor.dll
+C:\Program Files\obs-studio\bin\64bit\tls\qschannelbackend.dll
+C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\
+```
 
 ## 보안과 소스 코드
 
