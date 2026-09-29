@@ -6,7 +6,7 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 
 현재 버전은 `0.2.0`입니다.
 
-[Windows x64 설치 파일 다운로드](./obs-live-editor-0.2.0-windows-x64-setup.exe)
+[Windows x64 설치 파일 다운로드](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-setup.exe)
 
 요구 사항:
 
