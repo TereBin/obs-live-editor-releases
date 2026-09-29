@@ -4,9 +4,9 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 
 ## 최신 버전
 
-현재 버전은 `0.1.0`입니다.
+현재 버전은 `0.2.0`입니다.
 
-[Windows x64 설치 파일 다운로드](./obs-live-editor-0.1.0-windows-x64-setup.exe)
+[Windows x64 설치 파일 다운로드](./obs-live-editor-0.2.0-windows-x64-setup.exe)
 
 요구 사항:
 
@@ -25,7 +25,7 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 현재 설치 파일은 코드 서명이 되어 있지 않아 Windows SmartScreen 경고가 나타날 수 있습니다. `추가 정보`를 선택한 뒤 게시자와 파일을 확인하고 실행하세요. 무결성을 확인하려면 아래 명령의 결과를 [SHA256SUMS.txt](./SHA256SUMS.txt)와 비교합니다.
 
 ```powershell
-Get-FileHash .\obs-live-editor-0.1.0-windows-x64-setup.exe -Algorithm SHA256
+Get-FileHash .\obs-live-editor-0.2.0-windows-x64-setup.exe -Algorithm SHA256
 ```
 
 ## 사용
@@ -37,6 +37,8 @@ Get-FileHash .\obs-live-editor-0.1.0-windows-x64-setup.exe -Algorithm SHA256
 5. `적용`을 눌러 변경 내용을 저장합니다.
 
 `새로고침`은 현재 방송 정보를 다시 불러옵니다. 카테고리 오른쪽의 초기화 버튼을 누른 뒤 적용하면 카테고리가 제거됩니다.
+
+플러그인은 하루에 한 번 새 버전을 확인합니다. 일반 업데이트는 도크 상단에 표시되며, 현재 버전이 최소 지원 버전보다 낮거나 긴급 보안 업데이트가 필요한 경우 필수 업데이트 경고가 표시되고 방송 정보 변경 기능이 비활성화됩니다.
 
 ## 삭제
 
