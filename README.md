@@ -26,6 +26,49 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 4. 파일 복사 중 관리자 권한 요청이 나타나면 승인합니다.
 5. OBS Studio를 다시 실행하고 `도크` 메뉴에서 `라이브 정보 편집`을 엽니다.
 
+<details>
+<summary><strong>폴더 복사 위치 자세히 보기</strong></summary>
+
+압축을 풀면 다음 세 폴더가 보입니다.
+
+```text
+bin
+data
+obs-plugins
+```
+
+개별 DLL만 꺼내지 말고 **세 폴더를 폴더째 모두 선택**하여 OBS 설치 폴더 안에 복사하세요. 기본 설치 위치는 다음과 같습니다.
+
+```text
+C:\Program Files\obs-studio
+```
+
+Windows에서 같은 이름의 폴더가 있다는 메시지가 나타나면 폴더 병합과 파일 덮어쓰기를 허용합니다. 복사가 끝난 뒤 파일 위치는 정확히 다음과 같아야 합니다.
+
+```text
+C:\Program Files\obs-studio\bin\64bit\tls\qschannelbackend.dll
+C:\Program Files\obs-studio\obs-plugins\64bit\obs-live-editor.dll
+C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\locale\ko-KR.ini
+C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\locale\en-US.ini
+```
+
+특히 `qschannelbackend.dll`은 `tls` 폴더 밖으로 따로 옮기면 안 됩니다. 위치가 잘못되면 로그인할 때 `TLS initialization failed` 오류가 발생합니다.
+
+다음과 같이 폴더가 한 번 더 중복된 경로도 잘못된 설치입니다.
+
+```text
+C:\Program Files\obs-studio\bin\bin\64bit\tls\qschannelbackend.dll
+C:\Program Files\obs-studio\obs-plugins\obs-plugins\64bit\obs-live-editor.dll
+```
+
+문제가 계속되면 OBS에서 `도움말 > 로그 파일 > 현재 로그 보기`를 열고 아래 문구가 있는지 확인하세요.
+
+```text
+[obs-live-editor] plugin loaded (version 0.2.0)
+```
+
+</details>
+
 ## EXE 설치
 
 Microsoft의 오탐 분석이 끝난 뒤에는 설치 파일을 이용할 수 있습니다.
