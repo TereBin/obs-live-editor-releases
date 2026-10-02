@@ -8,8 +8,8 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 - [설치 및 업데이트](#설치-및-업데이트)
 - [설정 방법](#설정-방법)
 - [문제 해결](#문제-해결)
-- [문제 보고 및 문의](#문제-보고)
 - [보안과 소스 코드](#보안과-소스-코드)
+- [문제 보고 및 문의](#문제-보고)
 
 ## 주요 기능
 
@@ -187,6 +187,12 @@ C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\
 - **확인:** Windows 보안의 `바이러스 및 위협 방지 > 보호 기록`에서 탐지 이름과 영향을 받은 파일을 확인합니다.
 - **해결:** 보안 기능을 끄거나 예외를 추가하지 마세요. EXE가 차단되면 [무설치 ZIP](#다운로드)을 사용하고 체크섬을 확인합니다. ZIP 내부 파일도 탐지되면 설치를 중단하고 탐지 이름을 포함해 문제를 보고해 주세요.
 
+## 보안과 소스 코드
+
+로그인 토큰은 Windows DPAPI로 암호화되어 현재 Windows 사용자만 읽을 수 있는 로컬 파일에 저장됩니다. Client Secret과 실제 사용자 토큰은 이 저장소에 포함되지 않습니다.
+
+소스 코드, 빌드 방법, Worker 구성은 [obs-live-editor 소스 저장소](https://github.com/TereBin/obs-live-editor)에서 확인할 수 있습니다. 이 프로그램은 GPL-2.0 라이선스로 배포됩니다.
+
 ## 문제 보고
 
 오류 보고와 기능 제안은 [Live Editor for OBS Issues](https://github.com/TereBin/obs-live-editor/issues)를 이용해 주세요. 공개 이슈 작성이 어렵거나 개별 문의가 필요하면 [Discord에서 TereBin에게 문의](https://discordapp.com/users/537256771501424640)할 수 있습니다.
@@ -194,12 +200,6 @@ C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\
 OBS에서 `도움말 > 로그 파일 > 현재 로그 보기`를 선택하고 문제 발생 직후의 로그에서 `obs-live-editor`, `TLS`, `qschannelbackend`가 포함된 줄과 도크의 오류 문구를 함께 제공하면 원인 확인이 빠릅니다.
 
 어느 경로로 문의하더라도 Access Token, Refresh Token, Client Secret 또는 `credentials.bin` 파일은 절대 첨부하거나 전송하지 마세요.
-
-## 보안과 소스 코드
-
-로그인 토큰은 Windows DPAPI로 암호화되어 현재 Windows 사용자만 읽을 수 있는 로컬 파일에 저장됩니다. Client Secret과 실제 사용자 토큰은 이 저장소에 포함되지 않습니다.
-
-소스 코드, 빌드 방법, Worker 구성은 [obs-live-editor 소스 저장소](https://github.com/TereBin/obs-live-editor)에서 확인할 수 있습니다. 이 프로그램은 GPL-2.0 라이선스로 배포됩니다.
 
 ## 후원
 
