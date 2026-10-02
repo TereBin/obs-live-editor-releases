@@ -11,22 +11,6 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 - [문제 보고 및 문의](#문제-보고)
 - [보안과 소스 코드](#보안과-소스-코드)
 
-## 다운로드
-
-현재 버전은 `0.2.0`입니다.
-
-[Windows x64 무설치 ZIP 다운로드 (권장)](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-portable.zip)
-
-[Windows x64 설치 파일 다운로드](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-setup.exe)
-
-> **Defender 안내:** EXE 설치 파일이 일부 PC에서 `Trojan:Win32/Wacatac.C!ml`로 오탐되는 사례가 있어 현재는 무설치 ZIP을 권장합니다. Windows 보안 기능을 끄거나 예외를 추가하지 마세요. 자세한 대응 방법은 [Defender 문제 해결](#다운로드-또는-검사-중-defender가-파일을-차단함)을 확인하세요.
-
-다운로드한 파일의 무결성은 [SHA256SUMS.txt](./SHA256SUMS.txt)와 비교할 수 있습니다.
-
-```powershell
-Get-FileHash .\obs-live-editor-*-windows-x64-portable.zip -Algorithm SHA256
-```
-
 ## 주요 기능
 
 - OBS Studio 도크에서 치지직 방송 제목 조회 및 변경
@@ -44,6 +28,22 @@ Get-FileHash .\obs-live-editor-*-windows-x64-portable.zip -Algorithm SHA256
 - OBS Studio 32.2.2 이상 64비트
 - 치지직 스트리머 계정
 - 인터넷 연결
+
+## 다운로드
+
+현재 버전은 `0.2.0`입니다.
+
+[Windows x64 무설치 ZIP 다운로드 (권장)](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-portable.zip)
+
+[Windows x64 설치 파일 다운로드](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-setup.exe)
+
+> **Defender 안내:** EXE 설치 파일이 일부 PC에서 `Trojan:Win32/Wacatac.C!ml`로 오탐되는 사례가 있어 현재는 무설치 ZIP을 권장합니다. Windows 보안 기능을 끄거나 예외를 추가하지 마세요. 자세한 대응 방법은 [Defender 문제 해결](#다운로드-또는-검사-중-defender가-파일을-차단함)을 확인하세요.
+
+다운로드한 파일의 무결성은 [SHA256SUMS.txt](./SHA256SUMS.txt)와 비교할 수 있습니다.
+
+```powershell
+Get-FileHash .\obs-live-editor-*-windows-x64-portable.zip -Algorithm SHA256
+```
 
 ## 설치
 
