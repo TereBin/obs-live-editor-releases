@@ -12,11 +12,23 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 
 > **Defender 오탐 안내:** 현재 설치 파일이 일부 PC에서 `Trojan:Win32/Wacatac.C!ml`로 탐지되는 사례가 있어 Microsoft에 오탐 분석을 요청했습니다. 분석이 완료될 때까지는 위의 무설치 ZIP 사용을 권장합니다. Windows 보안 기능을 끄거나 백신 예외를 추가하지 마세요. ZIP 내부 파일도 탐지될 경우 설치를 중단하고 [Issues](https://github.com/TereBin/obs-live-editor/issues)에 알려주세요.
 
-요구 사항:
+## 주요 기능
+
+- OBS Studio 도크에서 치지직 방송 제목 조회 및 변경
+- 카테고리 검색, 선택 및 제거
+- 방송 태그 조회, 변경 및 전체 제거
+- 브라우저를 이용한 치지직 OAuth 로그인
+- Access Token 자동 갱신
+- Windows DPAPI를 이용한 로그인 토큰 암호화 저장
+- 새 버전 자동 확인 및 중요도별 업데이트 알림
+- 최소 지원 버전 미만 또는 긴급 보안 업데이트 시 필수 업데이트 안내
+
+## 요구 사항
 
 - Windows 10 또는 Windows 11 64비트
-- OBS Studio 64비트
+- OBS Studio 32.2.2 이상 64비트
 - 치지직 스트리머 계정
+- 인터넷 연결
 
 ## 무설치 ZIP 설치 (권장)
 
