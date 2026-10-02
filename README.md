@@ -180,7 +180,9 @@ C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\
 
 ## 문제 보고
 
-오류와 기능 제안은 [소스 저장소의 Issues](https://github.com/TereBin/obs-live-editor/issues)에 남기거나 [Discord로 문의](https://discordapp.com/users/537256771501424640)해 주세요. OBS에서 `도움말 > 로그 파일 > 현재 로그 보기`를 선택하고 문제 발생 직후의 로그에서 `obs-live-editor`, `TLS`, `qschannelbackend`가 포함된 줄과 도크의 오류 문구를 함께 제공하면 원인 확인이 빠릅니다.
+오류 보고와 기능 제안은 [Live Editor for OBS Issues](https://github.com/TereBin/obs-live-editor/issues)를 이용해 주세요. 공개 이슈 작성이 어렵거나 개별 문의가 필요하면 [Discord에서 TereBin에게 문의](https://discordapp.com/users/537256771501424640)할 수 있습니다.
+
+OBS에서 `도움말 > 로그 파일 > 현재 로그 보기`를 선택하고 문제 발생 직후의 로그에서 `obs-live-editor`, `TLS`, `qschannelbackend`가 포함된 줄과 도크의 오류 문구를 함께 제공하면 원인 확인이 빠릅니다.
 
 어느 경로로 문의하더라도 Access Token, Refresh Token, Client Secret 또는 `credentials.bin` 파일은 절대 첨부하거나 전송하지 마세요.
 
