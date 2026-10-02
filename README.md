@@ -123,11 +123,11 @@ C:\Program Files\obs-studio\obs-plugins\obs-plugins\64bit\obs-live-editor.dll
 
 `새로고침`은 현재 방송 정보를 다시 불러옵니다. 카테고리 오른쪽의 초기화 버튼을 누른 뒤 적용하면 카테고리가 제거됩니다.
 
-## 삭제
+## 제거
 
 EXE로 설치했다면 Windows의 `설정 > 앱 > 설치된 앱`에서 `Live Editor for OBS`를 제거합니다.
 
-무설치 ZIP으로 설치했다면 OBS를 종료한 뒤 다음 파일을 직접 삭제합니다.
+무설치 ZIP으로 설치했다면 OBS를 종료한 뒤 다음 파일을 직접 제거합니다.
 
 ```text
 C:\Program Files\obs-studio\obs-plugins\64bit\obs-live-editor.dll
