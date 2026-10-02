@@ -33,9 +33,9 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 
 현재 버전은 `0.2.0`입니다.
 
-[Windows x64 무설치 ZIP 다운로드 (권장)](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-portable.zip)
-
-[Windows x64 설치 파일 다운로드](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-setup.exe)
+- [Windows x64 무설치 ZIP 바로 다운로드 (권장)](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-portable.zip)
+- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-setup.exe)
+- [최신 릴리스 페이지와 변경 사항 보기](https://github.com/TereBin/obs-live-editor-releases/releases/latest)
 
 > **Defender 안내:** EXE 설치 파일이 일부 PC에서 `Trojan:Win32/Wacatac.C!ml`로 오탐되는 사례가 있어 현재는 무설치 ZIP을 권장합니다. Windows 보안 기능을 끄거나 예외를 추가하지 마세요. 자세한 대응 방법은 [Defender 문제 해결](#다운로드-또는-검사-중-defender가-파일을-차단함)을 확인하세요.
 
@@ -115,11 +115,20 @@ C:\Program Files\obs-studio\obs-plugins\obs-plugins\64bit\obs-live-editor.dll
 
 ## 설정 방법
 
+### 1. 로그인
+
 1. `로그인`을 누르고 브라우저에서 치지직 로그인을 완료합니다.
-2. 방송 제목을 입력합니다.
-3. 카테고리 이름을 두 글자 이상 입력하고 검색 결과에서 선택합니다.
-4. 태그는 쉼표로 구분해 입력합니다.
-5. `적용`을 눌러 변경 내용을 저장합니다.
+2. 브라우저에 로그인 완료 화면이 표시되면 OBS로 돌아옵니다.
+3. 도크에 로그인한 채널 정보가 표시되는지 확인합니다.
+
+한 번 로그인하면 Access Token이 만료되기 전에 자동으로 갱신됩니다. 직접 로그아웃하거나 인증이 만료된 경우에만 다시 로그인하면 됩니다.
+
+### 2. 방송 정보 설정
+
+1. 방송 제목을 입력합니다.
+2. 카테고리 이름을 두 글자 이상 입력하고 검색 결과에서 선택합니다.
+3. 태그는 쉼표로 구분해 입력합니다.
+4. `적용`을 눌러 변경 내용을 저장합니다.
 
 `새로고침`은 현재 방송 정보를 다시 불러옵니다. 카테고리 오른쪽의 초기화 버튼을 누른 뒤 적용하면 카테고리가 제거됩니다.
 
@@ -146,6 +155,16 @@ C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\
 
 - **확인:** 로그의 `[obs-live-editor] plugin loaded (version ...)`이 [다운로드](#다운로드)에 표시된 현재 버전과 같은지 확인합니다.
 - **해결:** OBS를 완전히 종료하고 최신 ZIP을 다시 내려받은 뒤 [설치 및 업데이트](#설치-및-업데이트)에 따라 세 폴더를 모두 덮어씁니다. OBS가 실행 중이면 기존 DLL이 교체되지 않을 수 있습니다.
+
+### 설치 프로그램이 OBS를 찾지 못함
+
+- **확인:** 기본 OBS 설치 폴더인 `C:\Program Files\obs-studio` 안에 `bin\64bit\obs64.exe`가 있는지 확인합니다. 포터블 OBS나 사용자 지정 위치에 설치한 OBS는 EXE 설치 프로그램이 찾지 못할 수 있습니다.
+- **해결:** OBS가 설치되어 있지 않다면 64비트 OBS Studio를 먼저 설치합니다. 포터블 OBS나 사용자 지정 위치를 사용한다면 [무설치 ZIP 설치](#무설치-zip-권장)에 따라 해당 OBS 최상위 폴더에 세 폴더를 직접 복사합니다.
+
+### OBS가 실행 중이라는 안내가 표시됨
+
+- **확인:** 작업 표시줄과 시스템 트레이에 OBS가 남아 있는지 확인합니다. 작업 관리자에서 `obs64.exe`가 실행 중인지도 확인합니다.
+- **해결:** OBS를 완전히 종료한 뒤 설치 파일을 다시 실행합니다. 설치 프로그램의 종료 요청이 표시되면 작업을 저장하고 OBS 종료를 허용합니다.
 
 ### 로그인할 때 `TLS initialization failed`가 표시됨
 
@@ -190,6 +209,8 @@ C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\
 ## 보안과 소스 코드
 
 로그인 토큰은 Windows DPAPI로 암호화되어 현재 Windows 사용자만 읽을 수 있는 로컬 파일에 저장됩니다. Client Secret과 실제 사용자 토큰은 이 저장소에 포함되지 않습니다.
+
+로그인을 시작할 때 Worker가 발급하는 OAuth state는 서버에 저장되지 않는 서명된 값이며 5분 동안만 유효합니다. 인증 코드와 토큰은 요청을 처리하는 동안 치지직과 플러그인 사이에서 전달될 뿐 Worker에 영구 저장되지 않습니다.
 
 소스 코드, 빌드 방법, Worker 구성은 [obs-live-editor 소스 저장소](https://github.com/TereBin/obs-live-editor)에서 확인할 수 있습니다. 이 프로그램은 GPL-2.0 라이선스로 배포됩니다.
 
