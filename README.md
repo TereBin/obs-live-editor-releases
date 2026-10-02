@@ -119,6 +119,7 @@ C:\Program Files\obs-studio\data\obs-plugins\obs-live-editor\
 
 오류를 보고할 때는 소스 저장소의 Issues를 이용해 주세요. Access Token, Refresh Token, Client Secret 또는 `credentials.bin` 파일을 첨부하지 마세요.
 
----
+## 후원
 
-[개발자 후원하기](https://ko-fi.com/terebin)
+Live Editor for OBS가 도움이 되었다면 [Ko-fi에서 TereBin 후원하기](https://ko-fi.com/terebin)를
+통해 개발을 응원할 수 있습니다.
