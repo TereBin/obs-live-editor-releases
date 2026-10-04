@@ -22,6 +22,7 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 - 도크 너비에 맞춘 반응형 배치
 - Windows DPAPI를 이용한 로그인 토큰 암호화 저장
 - 새 버전 자동 확인 및 중요도별 업데이트 알림
+- 운영 공지 배너와 중요 알림창
 - 최소 지원 버전 미만 또는 긴급 보안 업데이트 시 필수 업데이트 안내
 
 ## 요구 사항
@@ -33,10 +34,10 @@ OBS Studio에서 치지직 방송 제목, 카테고리, 태그를 수정할 수 
 
 ## 다운로드
 
-현재 버전은 `0.2.0`입니다.
+현재 버전은 `0.3.0`입니다.
 
-- [Windows x64 무설치 ZIP 바로 다운로드 (권장)](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-portable.zip)
-- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.2.0/obs-live-editor-0.2.0-windows-x64-setup.exe)
+- [Windows x64 무설치 ZIP 바로 다운로드 (권장)](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.3.0/obs-live-editor-0.3.0-windows-x64-portable.zip)
+- [Windows x64 설치 파일 바로 다운로드](https://github.com/TereBin/obs-live-editor-releases/releases/download/v0.3.0/obs-live-editor-0.3.0-windows-x64-setup.exe)
 - [최신 릴리스 페이지와 변경 사항 보기](https://github.com/TereBin/obs-live-editor-releases/releases/latest)
 
 > **Defender 안내:** EXE 설치 파일이 일부 PC에서 `Trojan:Win32/Wacatac.C!ml`로 오탐되는 사례가 있어 현재는 무설치 ZIP을 권장합니다. Windows 보안 기능을 끄거나 예외를 추가하지 마세요. 자세한 대응 방법은 [Defender 문제 해결](#다운로드-또는-검사-중-defender가-파일을-차단함)을 확인하세요.
